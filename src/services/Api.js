@@ -1,6 +1,5 @@
 const BASE_URL = 'https://dummyjson.com';
 
-// Fetch all products from the API
 export const fetchProducts = async () => {
   try {
     const response = await fetch(`${BASE_URL}/products`);
@@ -12,7 +11,6 @@ export const fetchProducts = async () => {
   }
 };
 
-// Search products by name or category
 export const searchProducts = async (query) => {
   try {
     const response = await fetch(`${BASE_URL}/products/search?q=${query}`);

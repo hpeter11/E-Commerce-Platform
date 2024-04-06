@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, FormLabel } from 'react-bootstrap';
 
 const CategoryFilter = ({ categories, onCategoryChange }) => {
   const handleCategoryChange = (event) => {
@@ -8,8 +8,8 @@ const CategoryFilter = ({ categories, onCategoryChange }) => {
   };
 
   return (
-    <Form.Group>
-      <Form.Label>Filter by Category</Form.Label>
+    <div className="d-flex align-items-center">
+      <FormLabel className="me-2">Filter:</FormLabel>
       <Form.Control as="select" onChange={handleCategoryChange}>
         <option value="">All Categories</option>
         {categories.map((category) => (
@@ -18,7 +18,7 @@ const CategoryFilter = ({ categories, onCategoryChange }) => {
           </option>
         ))}
       </Form.Control>
-    </Form.Group>
+    </div>
   );
 };
 

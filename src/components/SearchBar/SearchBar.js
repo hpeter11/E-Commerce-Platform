@@ -16,12 +16,13 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <Form onSubmit={handleSearch} inline>
+    <Form onSubmit={handleSearch} className="d-flex">
       <FormControl
         type="text"
         placeholder="Search products..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
+        className="me-2"
       />
       <Button variant="primary" type="submit">
         Search

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProductList from './components/ProductList/ProductList';
-import Cart from './components/Cart/Cart';
 import SearchBar from './components/SearchBar/SearchBar';
-import CategoryFilter from './components/CategoryFilter/CategoryFilter'; // Import the CategoryFilter component
+import CategoryFilter from './components/CategoryFilter/CategoryFilter'; 
 import { fetchProducts } from './services/Api';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './TopBar.css';
+import CartContainer from './components/CartContainer/CartContainer';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -18,7 +19,7 @@ const App = () => {
       try {
         const data = await fetchProducts();
         setProducts(data);
-        setFilteredProducts(data); // Set initial filtered products to all products
+        setFilteredProducts(data); 
         const uniqueCategories = [...new Set(data.map((product) => product.category))];
         setCategories(uniqueCategories);
       } catch (error) {
@@ -68,22 +69,27 @@ const App = () => {
 
   return (
     <Container fluid>
-      <Row className="my-4">
-        <Col>
-          <SearchBar onSearch={handleSearch} />
+      <Row className="site-title-row">
+        <Col xs={12}>
+          <h1 className="site-title">Scott's E-Commerce Site</h1>
         </Col>
-        <Col>
+      </Row>
+      <Row className="top-bar">
+        <Col xs={4}>
           <CategoryFilter categories={categories} onCategoryChange={handleCategoryChange} />
         </Col>
-      </Row>
-      <Row>
-        <Col md={8}>
-          <ProductList products={filteredProducts} addToCart={addToCart} />
+        <Col xs={4}>
+          <SearchBar onSearch={handleSearch} />
         </Col>
-        <Col md={4}>
-          <Cart cart={cart} updateCart={updateCart} removeFromCart={removeFromCart} />
+        <Col xs={4} className="d-flex justify-content-end">
         </Col>
       </Row>
+      <Row className="mt-5">
+  <Col md={{ span: 8, offset: 2 }} className="mt-5">
+    <ProductList products={filteredProducts} addToCart={addToCart} />
+  </Col>
+  <CartContainer cart={cart} updateCart={updateCart} removeFromCart={removeFromCart} />
+</Row>
     </Container>
   );
 };

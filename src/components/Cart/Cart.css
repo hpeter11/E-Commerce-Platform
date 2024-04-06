@@ -26,7 +26,31 @@
     margin: 0 5px;
   }
   
-  .cart-total {
-    margin-top: 20px;
-    font-weight: bold;
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    padding: 10px 0;
   }
+  
+  .cart-title {
+    margin: 0;
+  }
+  
+  .cart-total {
+    margin-left: 10px;
+  }
+  
+  .cart-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+
+  .cart-total {
+    margin-left: auto;
+}
