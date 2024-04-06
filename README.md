@@ -3,7 +3,7 @@ This is a React-based e-commerce site that allows users to browse products, add 
 
 ## Features
 - View a list of available products with images, titles, prices, and descriptions
-- Add products to a cart with desired quantities
+- Add products to a cart with chosen quantities
 - Remove products from the cart
 - Increase or decrease the quantity of a product in the cart
 - Search for products by name
@@ -19,7 +19,7 @@ This is a React-based e-commerce site that allows users to browse products, add 
 1. Clone the repository:
 'git clone https://github.com/your-username/e-commerce-site.git'
 
-2. Navigate to the project directory:
+2. Find the project directory:
 'cd /path/to/e-commerce-site'
 
 3. Install dependencies:
@@ -28,16 +28,11 @@ This is a React-based e-commerce site that allows users to browse products, add 
 Usage:
 1. Start the development server:
 'npm start'
-2. Open your web browser and navigate to http://localhost:3000 to see the app running.
+2. Open your web browser and open the link http://localhost:3000 to see the app running.
 
 ## Testing
 This project includes a test suite written using React Testing Library. To run the tests, use the following command:
 'npm test' (or 'npm i && npm start' to install all dependencies before running).
 
 ## Accessibility
-The application has been designed with accessibility in mind. It includes the following accessibility features:
-
-- Appropriate use of aria-labels and aria-live regions for screen readers
-- Keyboard navigation support
-- Semantic HTML elements
-- Proper color contrast
+The application has been designed with accessibility in mind. It emphasizes the use of appropriate use of aria-labels and aria-live regions for screen readers.
