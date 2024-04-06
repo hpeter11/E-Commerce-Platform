@@ -8,12 +8,12 @@ This is a React-based e-commerce site that allows users to browse products, add 
 - Increase or decrease the quantity of a product in the cart
 - Search for products by name
 - Filter products by category
-- View the total cost of items in the cart\
+- View the total cost of items in the cart
 
 ## Technologies Used
 - React
 - React Bootstrap
-- Axios (for API requests)\
+- Axios (for API requests)
 
 ## Installation
 1. Clone the repository:
@@ -23,16 +23,16 @@ This is a React-based e-commerce site that allows users to browse products, add 
 'cd /path/to/e-commerce-site'
 
 3. Install dependencies:
-'npm install'\
+'npm install'
 
 Usage:
 1. Start the development server:
 'npm start'
-2. Open your web browser and navigate to http://localhost:3000 to see the app running.\
+2. Open your web browser and navigate to http://localhost:3000 to see the app running.
 
 ## Testing
-This project includes a test suite written using React Testing Library. To run the tests, use the following command:\
-'npm test'\
+This project includes a test suite written using React Testing Library. To run the tests, use the following command:
+'npm test' (or 'npm i && npm start' to install all dependencies before running).
 
 ## Accessibility
 The application has been designed with accessibility in mind. It includes the following accessibility features:
