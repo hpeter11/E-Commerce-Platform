@@ -8,7 +8,7 @@
     background-color: #e8e8e8;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
+    z-index: 1005; /* need this to be overlaid above all */
     width: 300px;
     border-radius: 8px;
     border: 2px solid rgb(208, 208, 208);
